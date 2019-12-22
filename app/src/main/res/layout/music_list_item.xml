@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/list_music_relativeLayout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+    <!--非播放的音乐，背景色为白色，（android:background="@color/colorLightBlue"）不用-->
+    <ImageView
+        android:id="@+id/music_icon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:srcCompat="@drawable/music_icon"
+        android:scaleType="centerCrop"
+        android:layout_centerVertical="true"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_toRightOf="@id/music_icon"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                tools:ignore="Suspicious0dp"
+                android:layout_weight="5">
+                <TextView
+                    android:id="@+id/list_music_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="歌名歌名歌名歌名名歌名歌名名歌名歌名名歌名歌名歌名歌名名歌名歌名"
+                    android:textSize="16dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorPrimaryDark"/>
+
+                <TextView
+                    android:id="@+id/list_music_maker"
+                    android:text="作者作者作者作者"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                  />
+
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/list_music_control"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/play"
+                android:layout_weight="1"/>
+            <ImageView
+                android:id="@+id/list_music_move_or_add"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/add"
+                android:layout_weight="1"/>
+            <ImageView
+                android:id="@+id/list_music_add_to_like"
+                android:visibility="invisible"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/heart"
+                android:layout_weight="1"/>
+
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>
